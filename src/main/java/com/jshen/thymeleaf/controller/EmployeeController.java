@@ -1,6 +1,6 @@
 package com.jshen.thymeleaf.controller;
 
-import com.jshen.thymeleaf.model.Employee;
+import com.jshen.thymeleaf.entity.Employee;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +30,7 @@ public class EmployeeController {
 
     @GetMapping("/list")
     public String listEmployees(Model model){
-        model.addAttribute("employees", employees);
+        model.addAttribute("emplo yees", employees);
         return "list-employees";
     }
 }
