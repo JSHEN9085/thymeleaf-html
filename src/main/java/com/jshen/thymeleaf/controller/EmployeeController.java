@@ -30,7 +30,7 @@ public class EmployeeController {
 
     @GetMapping("/list")
     public String listEmployees(Model model){
-        model.addAttribute("emplo yees", employees);
+        model.addAttribute("employees", employees);
         return "list-employees";
     }
 }
