@@ -55,5 +55,13 @@ public class EmployeeController {
         return "redirect:/employees/list"; //redirect to the specific web address, return is followed by the file location(repository)
     }
 
+    @GetMapping("/delete")
+    public String delete(@RequestParam("employeeId") int id){
+        //delete the employee
+        employeeService.deleteById(id);
+
+        //redirect
+        return "redirect:/employees/list";
+    }
 
 }
